@@ -3,6 +3,7 @@ import Navbar from "../Component/Navbar/Navbar";
 import Footer from "../Component/HomepageData/Footer";
 
 
+
 const Main = () => {
     return (
         <div>

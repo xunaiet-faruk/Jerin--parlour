@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import navbarIcon from '../../../public/Navicon.png'
 const Navbar = () => {
 
-    const links = <div className="flex justify-end items-center gap-6">
+    const links = <div className="flex justify-end items-center gap-6 max-w-screen-2xl mx-auto">
         <NavLink
 
             to="/"
@@ -77,8 +77,8 @@ const Navbar = () => {
                 isPending
                     ? "pending"
                     : isActive
-                        ? "font-semibold border-b-4 border-b-[#daa9a9] transition"
-                        : "font-semibold hover:border-b-2 hover:border-b-[#fbbbbb] transition"
+                        ? "font-semibold  transition"
+                        : "font-semibold  transition"
             }
         >
             <span className="flex items-center  bg-[#F63E7B] px-5 py-1 rounded-md text-white hover:bg-pink-900   gap-2">

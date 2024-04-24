@@ -2,7 +2,7 @@
     --color1: #fbded2;
     --color2: #c8d3c6;
     perspective: 1000px;
-    padding: 1em 1em;
+    padding:  4px 5px;
     background: linear-gradient(var(--color1), var(--color2));
     border: none;
     outline: none;

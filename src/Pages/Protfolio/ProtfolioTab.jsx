@@ -38,7 +38,7 @@ const ProtfolioTab = () => {
                                     <div className="absolute p-5 text-red-600 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100">
                                         <div className='border-2 border-gray-300 h-full rounded-xl'>
                                             <div className='flex justify-center items-center mt-32'>
-                                                <button className="btn">Explore More</button>
+                                                <button className="buttonDesign">Explore More</button>
                                             </div>
                                         </div>
                                     </div>
@@ -48,7 +48,7 @@ const ProtfolioTab = () => {
                                     <div className="absolute p-5 text-red-600 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100">
                                         <div className='border-2 border-gray-300 h-full rounded-xl'>
                                             <div className='flex justify-center items-center mt-32'>
-                                                <button className="btn">Explore More</button>
+                                                <button className="buttonDesign">Explore More</button>
                                             </div>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@ const ProtfolioTab = () => {
                                     <div className="absolute p-5 text-red-600 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100">
                                         <div className='border-2 border-gray-300 h-full rounded-xl'>
                                             <div className='flex justify-center items-center mt-32'>
-                                                <button className="btn">Explore More</button>
+                                                <button className="buttonDesign">Explore More</button>
                                             </div>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@ const ProtfolioTab = () => {
                                     <div className="absolute p-5 text-red-600 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100">
                                         <div className='border-2 border-gray-300 h-full rounded-xl'>
                                             <div className='flex justify-center items-center mt-32'>
-                                                <button className="btn">Explore More</button>
+                                                <button className="buttonDesign">Explore More</button>
                                             </div>
                                         </div>
                                     </div>
