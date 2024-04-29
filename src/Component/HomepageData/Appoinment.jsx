@@ -2,7 +2,7 @@
 
 const Appoinment = () => {
     return (
-        <div className="mt-32 max-w-screen-2xl mx-auto ">
+        <div className="mt-32 mb-20 max-w-screen-2xl mx-auto ">
             <div>
                 <h1 className="text-center font-bold text-5xl font-serif">Contact <span className="text-[#F63E7B]">Us</span></h1>
                 <p className="text-gray-400 text-center pt-5">The best way to enjoy a treatment at our salon is to book an appointment with the desired esthetician. Fill in <br/> the form below and we will contact you to discuss your appointment.</p>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ProtfolioTab from "./ProtfolioTab";
 const Protfolio = () => {
     return (
-        <div className="">
+        <div className="mb-20">
             <div className="hero h-[500px] bg-cover" style={{ backgroundImage: 'url(https://i.ibb.co/60jDxxh/image.png)' }}>               
                 <div className="max-w-md">
                     <h1 className="text-5xl font-bold text-white ">Our Portfolio</h1>

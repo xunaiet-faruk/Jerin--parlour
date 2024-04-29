@@ -5,7 +5,7 @@ import BlogData from "./BlogData";
 
 const Blog = () => {
     return (
-        <div>
+        <div className="mb-20">
             <div className="hero h-[500px] bg-cover" style={{ backgroundImage: 'url(https://i.ibb.co/g7Mg5nn/image.png)' }}>
                 <div className="">
                     <h1 className="text-5xl font-bold text-white ">Blogs</h1>

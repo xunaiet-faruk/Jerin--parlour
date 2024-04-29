@@ -20,7 +20,7 @@ const BlogModal = () => {
                     onClick={() => setOpenModal(false)}
                     className={`fixed z-[100] flex items-center justify-center ${openModal ? 'visible opacity-100' : 'invisible opacity-0'} inset-0 bg-black/20 backdrop-blur-sm duration-100 dark:bg-transparent`}
                 >
-                    <div onClick={(e_) => e_.stopPropagation()} className={`text- absolute max-w-md rounded-lg bg-white p-6 drop-shadow-lg dark:bg-gray-800 dark:text-white ${openModal ? 'scale-1 opacity-1 duration-300' : 'scale-0 opacity-0 duration-150'}`}>
+                    <div onClick={(e_) => e_.stopPropagation()} className={`text- absolute max-w-md rounded-lg bg-[#Faeae3] p-6 drop-shadow-lg dark:bg-gray-800 dark:text-white ${openModal ? 'scale-1 opacity-1 duration-300' : 'scale-0 opacity-0 duration-150'}`}>
 
                         <h1 className="text-2xl font-bold text-center uppercase text-[#F63E7B] ">Write Your blog here</h1>
 

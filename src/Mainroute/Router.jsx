@@ -7,6 +7,8 @@ import HomePage from "../Pages/Home/HomePage";
 import Protfolio from "../Pages/Protfolio/Protfolio";
 import Blog from "../Pages/BlogPage/Blog";
 import Login from "../Component/Authentication/Login/Login";
+import Dasboard from "../Dashboard/Dasboard";
+import { Card } from "@mui/material";
 
 export const router = createBrowserRouter([
     {
@@ -28,7 +30,19 @@ export const router = createBrowserRouter([
             {
                 path:'/login',
                 element:<Login/>
-            }
+            },
+           
         ]
     },
+    {
+        path: '/dashboard',
+        element: <Dasboard />,
+        children:[
+           
+            {
+                path:'card',
+                element:<Card/>
+            }
+        ]
+    }
 ]);

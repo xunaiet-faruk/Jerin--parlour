@@ -2,7 +2,7 @@
 import image from '../../../public/Icon.png'
 const Footer = () => {
     return (
-        <div className='mt-32  '>
+        <div className='  '>
 
             <footer className="footer p-10 bg-[#Faeae3] text-base-content">
                 <aside>
