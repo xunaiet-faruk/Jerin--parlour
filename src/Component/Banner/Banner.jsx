@@ -15,7 +15,7 @@ export const Banner = () => {
         return () => clearInterval(intervalId);
     }, [nextSlider, currentSlider]);
     return (
-        <div className="bg-[#Faeae3] max-w-screen-2xl  -mt-16 mx-auto flex  lg:flex-row flex-col  lg:h-[100vh]  items-center justify-between px-5">
+        <div className="bg-[#Faeae3] max-w-screen-2xl   mx-auto flex  lg:flex-row flex-col  lg:h-[100vh]  items-center justify-between px-5">
             <div className="lg:w-1/2 lg:text-start text-center lg:mt-0 mt-32 space-y-3 ">
                 <h1 className="font-bold text-6xl w-[700px]  text-[#F63E7B] ">BEAUTY SALON FOR</h1>
 

@@ -75,7 +75,7 @@ const Navbar = () => {
 
         <NavLink
 
-            to="/portfolio"
+            to="/shop"
             className={({ isActive, isPending }) =>
                 isPending
                     ? "pending"
@@ -132,7 +132,7 @@ const Navbar = () => {
         <div>
 
 
-            <div className="navbar px-12   bg-[#Faeae3]  ">
+            <div className="navbar fixed z-10  bg-opacity-30  bg-[#Faeae3]  ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

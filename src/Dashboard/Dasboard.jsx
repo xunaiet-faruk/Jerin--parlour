@@ -6,17 +6,21 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { NavLink, Outlet } from 'react-router-dom';
+import image from '../../public/Icon.png' 
+import { FaShoppingBag } from 'react-icons/fa';
+import { IoMdAdd } from "react-icons/io";
+import { RiAdminFill } from "react-icons/ri";
+import { MdMiscellaneousServices } from "react-icons/md";;
+import { BsBasket2Fill } from "react-icons/bs";
+import { MdShoppingCart } from "react-icons/md";
+import { FaRegCommentDots } from "react-icons/fa";
+import { FaListUl } from 'react-icons/fa6';
+import { AuthContext } from '../Component/Authentication/Providers/Authprovider';
 
 const drawerWidth = 240;
 
@@ -24,6 +28,7 @@ function ResponsiveDrawer(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [isClosing, setIsClosing] = React.useState(false);
+    const { user } = React.useContext(AuthContext)
 
     const handleDrawerClose = () => {
         setIsClosing(true);
@@ -40,113 +45,263 @@ function ResponsiveDrawer(props) {
         }
     };
 
-    // <div style={{ backgroundImage: "url('https://i.ibb.co/V3zybB6/image.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-
-
     const drawer = (
-        <div className='bg-[#fefcfc]'>
-            <Toolbar />
-            <Divider />
+        <div className='' >
+          
+          <div className='flex items-center py-1 justify-center gap-4 '>
+              
+                <img className="size-10 rounded-full bg-slate-500 w-14 h-14 object-cover duration-500 hover:scale-x-[98%] hover:opacity-80" src={user?.photoURL} alt="avatar" />
+               <h1 className=' font-semibold text-black'>{user?.displayName}</h1>
+          </div>
+          
+          
             <List>
-              <ul>
-                    <li> <NavLink to={'/dashboard/card'} className="hover:bg-pink-200">
-                        Home TASK
-                    </NavLink></li>
-                    <li> <NavLink to={'/add'} className="hover:bg-pink-200">
-                       ADD TASK
-                    </NavLink></li>
+               
+              <ul className='mt-5'>
+               <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                        <NavLink
+
+                            to={'/dashboard/orderlist'}
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? ""
+                                        : ""
+                            }
+                        >
+
+
+                            <div className='flex justify-center items-center gap-4'>
+                                <FaShoppingBag/>  
+                                <h1>Order List</h1></div>
+
+                        </NavLink>
+               </li>
+               <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                        <NavLink
+
+                            to={'/dashboard/add'}
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? ""
+                                        : ""
+                            }
+                        >
+
+                            <div className='flex justify-center items-center gap-4'>
+                                <IoMdAdd />
+                                <h1>Add Service</h1></div>
+                           
+
+                        </NavLink>
+               </li>
+
+
+               <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                        <NavLink
+
+                            to={'/dashboard/makeadmin'}
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? ""
+                                        : ""
+                            }
+                        >
+
+                            <div className='flex justify-center items-center gap-4'>
+                                <RiAdminFill />
+                                <h1>Make Admin</h1></div>
+                           
+
+                        </NavLink>
+               </li>
+
+                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                        <NavLink
+
+                            to={'/dashboard/manage'}
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? ""
+                                        : ""
+                            }
+                        >
+
+                            <div className='flex justify-center items-center gap-4'>
+                                <MdMiscellaneousServices />
+                                <h1>Manage Services</h1></div>
+
+
+                        </NavLink>
+                    </li>
+
+                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                        <NavLink
+
+                            to={'/dashboard/bookingList'}
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? ""
+                                        : ""
+                            }
+                        >
+
+                            <div className='flex justify-center items-center gap-4'>
+                                <FaListUl /> 
+                                <h1>Booking List</h1></div>
+
+
+                        </NavLink>
+                    </li>
+
+                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                        <NavLink
+
+                            to={'/dashboard/book'}
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? ""
+                                        : ""
+                            }
+                        >
+
+                            <div className='flex justify-center items-center gap-4'>
+                                <MdShoppingCart />
+                                <h1>Book</h1></div>
+
+
+                        </NavLink>
+                    </li>
+
+                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                        <NavLink
+
+                            to={'/dashboard/review'}
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? ""
+                                        : ""
+                            }
+                        >
+
+                            <div className='flex justify-center items-center gap-4'>
+                                <FaRegCommentDots />
+                                <h1>Review</h1></div>
+
+
+                        </NavLink>
+                    </li>
               </ul>
             </List>
             <Divider />
             <List>
-                <NavLink>
-                Add 
+                <NavLink to={'/'}>
+                Home
                 </NavLink>
             </List>
         </div>
     );
     const container = window !== undefined ? () => window().document.body : undefined;
 
+    
     return (
-        <Box sx={{ display: 'flex' }} className="bg-[#fff3f3]">
-            <CssBaseline />
-            <AppBar
-                position="fixed"
-                sx={{
-                    width: { sm: `calc(100% - ${drawerWidth}px)` },
-                    ml: { sm: `${drawerWidth}px` },
-                }}
-            >
-                <Toolbar className='bg-[#fefcfc] text-black '>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+     <div >
+            <div>
+                <Box sx={{ display: 'flex' }} className="bg-[#f4f3f3] h-[100vh] " >
+                    <CssBaseline />
+                    <AppBar
+                        position="fixed"
+                        sx={{
+                            width: { sm: `calc(100% - ${drawerWidth}px)` },
+                            ml: { sm: `${drawerWidth}px` },
+                        }}
                     >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap component="div">
-                        <div className='font-bold'>
-                        Dashboard
-                        </div>
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-            <Box
-                component="nav"
-                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-                aria-label="mailbox folders"
-            >
-                <Drawer
-                    container={container}
-                    variant="temporary"
-                    open={mobileOpen}
-                    onTransitionEnd={handleDrawerTransitionEnd}
-                    onClose={handleDrawerClose}
-                    ModalProps={{
-                        keepMounted: true, 
-                    }}
-                    sx={{
-                        display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                    }}
-                >
-                    {drawer}
-                </Drawer>
-                <Drawer
-                    variant="permanent"
-                    sx={{
-                        display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                    }}
-                    open
-                >
-                    {drawer}
-                </Drawer>
-            </Box>
-            <Box
-                component="main"
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-            >
-                <Toolbar />
-             
-              <div className=''>
-                <Outlet/>
-              </div>
-               
-                
-            </Box>
-        </Box>
+                        <Toolbar className='bg-[#fefcfc] text-black '>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                edge="start"
+                                onClick={handleDrawerToggle}
+                                sx={{ mr: 2, display: { sm: 'none' } }}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Typography variant="h6" noWrap component="div" className=''>
+                                <div className='font-bold flex justify-between'>
+                                    <h1> Dashboard</h1>
+                                  
+                                </div>
+                            </Typography>
+                            <div className='absolute right-0'>
+                                <img className='animate-spin mr-5' src={image} alt="" />
+                            </div>
+                        </Toolbar>
+                    </AppBar>
+                    <Box
+                        component="nav"
+                        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+                        aria-label="mailbox folders"
+                    >
+                        <Drawer
+                            container={container}
+                            variant="temporary"
+                            open={mobileOpen}
+                            onTransitionEnd={handleDrawerTransitionEnd}
+                            onClose={handleDrawerClose}
+                            ModalProps={{
+                                keepMounted: true,
+                            }}
+                            sx={{
+                                display: { xs: 'block', sm: 'none' },
+                                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                            }}
+                        >
+                            {drawer}
+                        </Drawer>
+                        <Drawer
+                            variant="permanent"
+                            sx={{
+                                display: { xs: 'none', sm: 'block' },
+                                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                            }}
+                            open
+                        >
+                            {drawer}
+                        </Drawer>
+                    </Box>
+                    <Box
+                        component="main"
+                        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+                    >
+                        <Outlet />
+                        <Toolbar />
+
+                    </Box>
+                </Box>
+            </div>
+
+            
+     </div>
+      
+
     );
 }
 
 ResponsiveDrawer.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * Remove this when copying and pasting into your project.
-     */
+    
     window: PropTypes.func,
 };
 

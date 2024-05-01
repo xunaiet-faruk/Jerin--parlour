@@ -1,0 +1,128 @@
+[
+    {
+        "name": "Hair Treatment",
+        "image": "https://html.kodesolution.com/2024/purerelax-html/images/resource/product1-2.jpg",
+        "percentage": 10,
+        "price": 19.99,
+        "product": "Hair"
+    },
+    {
+        "name": "SilkStrand Hair Spa",
+        "image": "https://i.ibb.co/KLk00Dr/image.png",
+        "percentage": 10,
+        "price": 19.99,
+        "product": "Hair"
+    },
+    {
+        "name": "RadiantRevive Conditioner",
+        "image": "https://i.ibb.co/wyKzQnM/image.png",
+        "percentage": 10,
+        "price": 19.99,
+        "product": "Hair"
+    },
+    {
+        "name": "Glow Facial Cream",
+        "image": "https://html.kodesolution.com/2024/purerelax-html/images/resource/product1-1.jpg",
+        "percentage": 20,
+        "price": 25.99,
+        "product" :"Cream"
+       
+    },
+  
+    {
+        "name": "Massage Cream",
+        "image": "https://i.ibb.co/crLCbXn/image.png",
+        "percentage": 15,
+        "price": 29.99,
+        "product": "Cream"
+       
+    },
+    {
+        "name": "VelvetVive Moisturizing Cream",
+        "image": "https://i.ibb.co/JtwjMYx/image.png",
+        "percentage": 15,
+        "price": 29.99,
+        "product": "Cream"
+       
+    },
+    {
+        "name": "PureSilk Night Cream",
+        "image": "https://i.ibb.co/W32VR4L/image.png",
+        "percentage": 15,
+        "price": 29.99,
+        "product": "Cream"
+       
+    },
+    {
+        "name": "GlowGlow Day Cream",
+        "image": "https://i.ibb.co/Hxtqt94/image.png",
+        "percentage": 15,
+        "price": 29.99,
+        "product": "Cream"
+       
+    },
+    {
+        "name": "Body Message Oil",
+        "image": "https://i.ibb.co/59xHcZ5/image.png",
+        "percentage": 30,
+        "price": 34.99,
+        "product": "Oil"
+       
+    },
+    {
+        "name": "Body Message Oil",
+        "image": "https://html.kodesolution.com/2024/purerelax-html/images/resource/product1-4.jpg",
+        "percentage": 25,
+        "price": 39.99,
+        "product": "Oil"
+       
+    },
+    {
+        "name": "LuxeGlow Oil Elixir Oil ",
+        "image": "https://i.ibb.co/MCBv2hZ/image.png",
+        "percentage": 25,
+        "price": 39.99,
+        "product": "Oil"
+       
+    },
+    {
+        "name": "RoyalSilk Hair Oil ",
+        "image": "https://i.ibb.co/vmw5Tjw/image.png",
+        "percentage": 25,
+        "price": 39.99,
+        "product": "Oil"
+       
+    },
+    {
+        "name": "VOLUMIZING EYEB...",
+        "image": "https://i.ibb.co/jM26xsj/image.png",
+        "percentage": 25,
+        "price": 39.99,
+        "product": "Makeup "
+       
+    },
+    {
+        "name": "Waterproof eyeliner",
+        "image": "https://i.ibb.co/mG8Q1W2/image.png",
+        "percentage": 25,
+        "price": 39.99,
+        "product": "Makeup "
+       
+    },
+    {
+        "name": "WATERPROOF VINY..",
+        "image": "https://i.ibb.co/jvR5CNs/image.png",
+        "percentage": 25,
+        "price": 39.99,
+        "product": "Makeup "
+       
+    },
+    {
+        "name": "Revlon Extra Dimension Eye Shadow",
+        "image": "https://i.ibb.co/vPsgf6Q/image.png",
+        "percentage": 25,
+        "price": 39.99,
+        "product": "Makeup"
+       
+    }
+]
