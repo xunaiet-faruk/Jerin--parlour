@@ -89,6 +89,24 @@ const Navbar = () => {
                Shop
             </span>
         </NavLink>
+
+        <NavLink
+
+            to="/service"
+            className={({ isActive, isPending }) =>
+                isPending
+                    ? "pending"
+                    : isActive
+                        ? "font-semibold border-b-4 border-b-[#daa9a9] transition"
+                        : "font-semibold hover:border-b-2 hover:border-b-[#fbbbbb] transition"
+            }
+        >
+            <span className="flex items-center gap-2">
+
+                Services
+            </span>
+        </NavLink>
+
       {user ?<>
            
             <div ref={dropDownRef} className="relative mx-auto w-fit text-black">

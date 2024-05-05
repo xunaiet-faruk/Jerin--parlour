@@ -16,6 +16,7 @@ import OrderList from "../Dashboard/OrderList";
 import BookingList from "../Dashboard/BookingList";
 import Book from "../Dashboard/Book";
 import Review from "../Dashboard/Review";
+import ServicesNav from "../Pages/Services/ServicesNav";
 
 export const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
             {
                 path:'/shop',
                 element:<Shop/>
+            },
+            {
+                path:'/service',
+                element:<ServicesNav/>
             }
            
         ]
