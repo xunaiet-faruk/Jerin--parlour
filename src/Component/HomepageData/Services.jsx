@@ -4,7 +4,7 @@ import image3 from '../../../public/Group 1374.png'
 import './Services.css'
 const Services = () => {
     return (
-        <div className="mt-28 max-w-screen-2xl mx-auto ">
+        <div className="mt-28 max-w-screen-2xl mx-auto">
             <div>
                 <h1 className="text-center font-bold text-5xl font-serif">Our Awesome <span className="text-[#F63E7B]">Services</span></h1>
                 <div className="divider divider-error w-[250px] mx-auto"></div>

@@ -15,12 +15,12 @@ import image from '../../public/Icon.png'
 import { FaShoppingBag } from 'react-icons/fa';
 import { IoMdAdd } from "react-icons/io";
 import { RiAdminFill } from "react-icons/ri";
-import { MdMiscellaneousServices } from "react-icons/md";;
-import { BsBasket2Fill } from "react-icons/bs";
+import { MdMiscellaneousServices } from "react-icons/md";
 import { MdShoppingCart } from "react-icons/md";
 import { FaRegCommentDots } from "react-icons/fa";
-import { FaListUl } from 'react-icons/fa6';
+import { FaListUl, FaMoneyCheckDollar } from 'react-icons/fa6';
 import { AuthContext } from '../Component/Authentication/Providers/Authprovider';
+import Usecard from '../Hooks/Usecard';
 
 const drawerWidth = 240;
 
@@ -29,6 +29,7 @@ function ResponsiveDrawer(props) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [isClosing, setIsClosing] = React.useState(false);
     const { user } = React.useContext(AuthContext)
+    const [cart] =Usecard()
 
     const handleDrawerClose = () => {
         setIsClosing(true);
@@ -145,7 +146,7 @@ function ResponsiveDrawer(props) {
                     <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
                         <NavLink
 
-                            to={'/dashboard/bookingList'}
+                            to={'/dashboard/shopinglist'}
                             className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
@@ -157,7 +158,10 @@ function ResponsiveDrawer(props) {
 
                             <div className='flex justify-center items-center gap-4'>
                                 <FaListUl /> 
-                                <h1>Booking List</h1></div>
+                                <h1>Shoping List</h1>
+                                <span className="mb-3 flex h-[24px] w-[24px] items-center justify-center rounded-full bg-pink-300 text-center text-[12px] text-white ">{cart.length}</span>
+                                </div>
+                                
 
 
                         </NavLink>
@@ -166,7 +170,7 @@ function ResponsiveDrawer(props) {
                     <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
                         <NavLink
 
-                            to={'/dashboard/book'}
+                            to={'/dashboard/booking'}
                             className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
@@ -178,7 +182,27 @@ function ResponsiveDrawer(props) {
 
                             <div className='flex justify-center items-center gap-4'>
                                 <MdShoppingCart />
-                                <h1>Book</h1></div>
+                                <h1>Booking</h1></div>
+
+
+                        </NavLink>
+                    </li>
+                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                        <NavLink
+
+                            to={'/dashboard/pay'}
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? ""
+                                        : ""
+                            }
+                        >
+
+                            <div className='flex justify-center items-center gap-4'>
+                                <FaMoneyCheckDollar />
+                                <h1>Payment</h1></div>
 
 
                         </NavLink>
@@ -220,7 +244,7 @@ function ResponsiveDrawer(props) {
     return (
      <div >
             <div>
-                <Box sx={{ display: 'flex' }} className="bg-[#f4f3f3] h-[100vh] " >
+                <Box sx={{ display: 'flex' }} className="bg-[#f4f3f3] h-[200vh] " >
                     <CssBaseline />
                     <AppBar
                         position="fixed"

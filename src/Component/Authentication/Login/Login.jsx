@@ -29,6 +29,7 @@ const Login = () => {
     const { user, CreatUser, LoginUser, Logout, loading, UpdateuserProfile, GoogleSignin } =useContext(AuthContext)
 
     const from =location.state?.from?.pathname || "/"
+    console.log("hellow form",location.state);
     const handleRegister = async (e) => {
         e.preventDefault();
         const form = e.target;

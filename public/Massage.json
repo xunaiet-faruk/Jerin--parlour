@@ -1,0 +1,23 @@
+[
+    {
+        "image": "https://i.ibb.co/6g2hjRg/image.png",
+        "title": "Swedish Massage",
+        "price": "524",
+        "discount": "39",
+        "description": "Relax with a traditional Swedish massage that uses long, flowing strokes to reduce stress and improve circulation."
+    },
+    {
+        "image": "https://i.ibb.co/X4CLTW6/image.png",
+        "title": "Deep Tissue Massage",
+        "price": "124",
+        "discount": "9",
+        "description": "A deep tissue massage targets deeper layers of muscles and connective tissue to relieve chronic pain and tension."
+    },
+    {
+        "image": "https://i.ibb.co/Qnpdby1/image.png",
+        "title": "Hot Stone Massage",
+        "price": "124",
+        "discount": "29",
+        "description": "Enjoy a hot stone massage that uses smooth, heated stones to promote relaxation and ease muscle stiffness."
+    }
+]

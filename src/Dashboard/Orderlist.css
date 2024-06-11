@@ -1,0 +1,11 @@
+.option-pending {
+    color: red;
+}
+
+.option-done {
+    color: green;
+}
+
+.option-ongoing {
+    color: #FFBD3E;
+}

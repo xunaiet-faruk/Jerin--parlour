@@ -1,0 +1,31 @@
+[
+    
+    {
+        "image": "https://i.ibb.co/b5rKvq5/image.png",
+        "title": "Acne Treatment",
+        "price": "124",
+        "discount": "54",
+        "description": "A specialized treatment designed to clear acne, reduce inflammation, and prevent future breakouts."
+    },
+    {
+        "image": "https://i.ibb.co/xJTknDL/image.png",
+        "title": "Brightening Facial",
+        "price": "524",
+        "discount": "99",
+        "description": "A brightening facial that evens out skin tone and reduces the appearance of dark spots for a radiant complexion."
+    },
+    {
+        "image": "https://i.ibb.co/3C7yTRQ/image.png",
+        "title": "Exfoliating Peel",
+        "price": "624",
+        "discount": "9",
+        "description": "This treatment uses a gentle peel to exfoliate dead skin cells, revealing smoother and more youthful-looking skin."
+    },
+    {
+        "image": "https://i.ibb.co/SN9Jqmq/image.png",
+        "title": "Collagen Boost",
+        "price": "324",
+        "discount": "9",
+        "description": "A collagen-boosting treatment that helps to firm and plump the skin, reducing the appearance of wrinkles."
+    }
+]

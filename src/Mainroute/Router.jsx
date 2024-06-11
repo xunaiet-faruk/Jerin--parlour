@@ -9,14 +9,15 @@ import Blog from "../Pages/BlogPage/Blog";
 import Login from "../Component/Authentication/Login/Login";
 import Dasboard from "../Dashboard/Dasboard";
 import Shop from "../Pages/Shop/Shop";
-import Cart from "../Dashboard/OrderList";
 import AddService from "../Dashboard/AddService";
 import MakeAdmin from "../Dashboard/MakeAdmin";
 import OrderList from "../Dashboard/OrderList";
-import BookingList from "../Dashboard/BookingList";
 import Book from "../Dashboard/Book";
 import Review from "../Dashboard/Review";
 import ServicesNav from "../Pages/Services/ServicesNav";
+import ShopingList from "../Dashboard/ShopingList";
+import Booking from "../Dashboard/Booking";
+import Payment from "../Dashboard/Pay/Payment";
 
 export const router = createBrowserRouter([
     {
@@ -68,12 +69,16 @@ export const router = createBrowserRouter([
                 element:<MakeAdmin/>
             },
             {
-                path:'bookingList',
-                element:<BookingList/>
+                path:'shopinglist',
+                element:<ShopingList/>
             },
             {
-                path:'book',
-                element:<Book/>
+                path:'booking',
+                element:<Booking/>
+            },
+            {
+                path:'pay',
+                element:<Payment/>
             },
             {
                 path:'review',
