@@ -1,128 +1,110 @@
 [
     {
-        "name": "Hair Treatment",
-        "image": "https://html.kodesolution.com/2024/purerelax-html/images/resource/product1-2.jpg",
-        "percentage": 10,
-        "price": 19.99,
-        "product": "Hair"
+        "name": "Massage Soap",
+        "image": "https://i.ibb.co/m42pN4Z/image.png",
+        "percentage": 5,
+        "price": 32.99,
+        "product": "Makeup",
+        "rating" : 4
     },
     {
-        "name": "SilkStrand Hair Spa",
-        "image": "https://i.ibb.co/KLk00Dr/image.png",
-        "percentage": 10,
-        "price": 19.99,
-        "product": "Hair"
+        "name": "Flower",
+        "image": "https://i.ibb.co/VwpQnqK/image.png",
+        "percentage": 23,
+        "price": 12.99,
+        "rating" : 2
     },
     {
-        "name": "RadiantRevive Conditioner",
-        "image": "https://i.ibb.co/wyKzQnM/image.png",
-        "percentage": 10,
-        "price": 19.99,
-        "product": "Hair"
+        "name": "Massage Oil",
+        "image": "https://i.ibb.co/RTRLTLR/image.png",
+        "percentage": 25,
+        "price": 43.99,
+        "rating" : 5
     },
     {
-        "name": "Glow Facial Cream",
-        "image": "https://html.kodesolution.com/2024/purerelax-html/images/resource/product1-1.jpg",
+        "name": "Finnish sauna",
+        "image": "https://i.ibb.co/rynWwkr/image.png",
+        "percentage": 12,
+        "price": 69.99,
+        "rating" : 2
+    },
+    {
+        "name": "Organic Cream",
+        "image": "https://i.ibb.co/1QhmMh8/image.png",
+        "percentage": 250,
+        "price": 543.23,
+        "rating" : 2.3
+    },
+    {
+        "name": "Anti face Protection",
+        "image": "https://i.ibb.co/23q7H8K/image.png",
+        "percentage": 52,
+        "price": 123.99,
+        "rating" : 4.0
+    },
+    {
+        "name": "Eye Cream",
+        "image": "https://firstsight.design/cherie/beauty/wp-content/uploads/2020/05/Shop12-1.png",
+        "percentage": 56,
+        "price": 122.12,
+        "rating" : 1.0
+    },
+    {
+        "name": "Nordic Water",
+        "image": "https://firstsight.design/cherie/beauty/wp-content/uploads/2020/07/Shop20-2-1.png",
+        "percentage": 120,
+        "price": 390.29,
+        "rating" : 4.0
+    },
+    {
+        "name": "Beauty Box",
+        "image": "https://firstsight.design/cherie/beauty/wp-content/uploads/2020/05/box@4x-1.jpg",
+        "percentage": 15,
+        "price": 39.99,
+        "rating" : 3.0
+    },
+    {
+        "name": "Bright Formula",
+        "image": "https://firstsight.design/cherie/beauty/wp-content/uploads/2020/07/Shop21-1-1.png",
         "percentage": 20,
-        "price": 25.99,
-        "product" :"Cream"
-       
+        "price": 49.99,
+        "rating" : 1.0
     },
-  
+
+
+
+
+
+
     {
-        "name": "Massage Cream",
-        "image": "https://i.ibb.co/crLCbXn/image.png",
-        "percentage": 15,
-        "price": 29.99,
-        "product": "Cream"
-       
-    },
-    {
-        "name": "VelvetVive Moisturizing Cream",
-        "image": "https://i.ibb.co/JtwjMYx/image.png",
-        "percentage": 15,
-        "price": 29.99,
-        "product": "Cream"
-       
+        "name": "Facial gel",
+        "image": "https://firstsight.design/cherie/beauty/wp-content/uploads/2020/05/Shop14-1.png",
+        "percentage": 20.00,
+        "price": 149.9,
+        "rating" : 2.0
     },
     {
-        "name": "PureSilk Night Cream",
-        "image": "https://i.ibb.co/W32VR4L/image.png",
-        "percentage": 15,
-        "price": 29.99,
-        "product": "Cream"
-       
+        "name": "Light Wonder",
+        "image": "https://firstsight.design/cherie/beauty/wp-content/uploads/2020/06/Shop19-1.png",
+        "percentage": 20.00,
+        "price": 149.9,
+        "rating" : 2.0
     },
     {
-        "name": "GlowGlow Day Cream",
-        "image": "https://i.ibb.co/Hxtqt94/image.png",
-        "percentage": 15,
-        "price": 29.99,
-        "product": "Cream"
-       
+        "name": "Oill Water",
+        "image": "https://firstsight.design/cherie/beauty/wp-content/uploads/2020/06/Shop18-1.png",
+        "percentage": 20.00,
+        "price": 149.9,
+        "rating" : 2.0
     },
-    {
-        "name": "Body Message Oil",
-        "image": "https://i.ibb.co/59xHcZ5/image.png",
-        "percentage": 30,
-        "price": 34.99,
-        "product": "Oil"
-       
-    },
-    {
-        "name": "Body Message Oil",
-        "image": "https://html.kodesolution.com/2024/purerelax-html/images/resource/product1-4.jpg",
-        "percentage": 25,
-        "price": 39.99,
-        "product": "Oil"
-       
-    },
-    {
-        "name": "LuxeGlow Oil Elixir Oil ",
-        "image": "https://i.ibb.co/MCBv2hZ/image.png",
-        "percentage": 25,
-        "price": 39.99,
-        "product": "Oil"
-       
-    },
-    {
-        "name": "RoyalSilk Hair Oil ",
-        "image": "https://i.ibb.co/vmw5Tjw/image.png",
-        "percentage": 25,
-        "price": 39.99,
-        "product": "Oil"
-       
-    },
-    {
-        "name": "VOLUMIZING EYEB...",
-        "image": "https://i.ibb.co/jM26xsj/image.png",
-        "percentage": 25,
-        "price": 39.99,
-        "product": "Makeup "
-       
-    },
-    {
-        "name": "Waterproof eyeliner",
-        "image": "https://i.ibb.co/mG8Q1W2/image.png",
-        "percentage": 25,
-        "price": 39.99,
-        "product": "Makeup "
-       
-    },
-    {
-        "name": "WATERPROOF VINY..",
-        "image": "https://i.ibb.co/jvR5CNs/image.png",
-        "percentage": 25,
-        "price": 39.99,
-        "product": "Makeup "
-       
-    },
-    {
-        "name": "Revlon Extra Dimension Eye Shadow",
-        "image": "https://i.ibb.co/vPsgf6Q/image.png",
-        "percentage": 25,
-        "price": 39.99,
-        "product": "Makeup"
-       
-    }
+
+
+
+
+
+
+
+
+
+
 ]

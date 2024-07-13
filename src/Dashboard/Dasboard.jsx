@@ -46,6 +46,8 @@ function ResponsiveDrawer(props) {
         }
     };
 
+    const admin =true;
+
     const drawer = (
         <div className='' >
           
@@ -58,177 +60,248 @@ function ResponsiveDrawer(props) {
           
             <List>
                
-              <ul className='mt-5'>
-               <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
-                        <NavLink
+             {
+                admin ?
+                        <ul className='mt-5'>
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
 
-                            to={'/dashboard/orderlist'}
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? ""
-                                        : ""
-                            }
-                        >
-
-
-                            <div className='flex justify-center items-center gap-4'>
-                                <FaShoppingBag/>  
-                                <h1>Order List</h1></div>
-
-                        </NavLink>
-               </li>
-               <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
-                        <NavLink
-
-                            to={'/dashboard/add'}
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? ""
-                                        : ""
-                            }
-                        >
-
-                            <div className='flex justify-center items-center gap-4'>
-                                <IoMdAdd />
-                                <h1>Add Service</h1></div>
-                           
-
-                        </NavLink>
-               </li>
+                                    to={'/dashboard/orderlist'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
 
 
-               <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
-                        <NavLink
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <FaShoppingBag />
+                                        <h1>Order List</h1></div>
 
-                            to={'/dashboard/makeadmin'}
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? ""
-                                        : ""
-                            }
-                        >
+                                </NavLink>
+                            </li>
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
 
-                            <div className='flex justify-center items-center gap-4'>
-                                <RiAdminFill />
-                                <h1>Make Admin</h1></div>
-                           
-
-                        </NavLink>
-               </li>
-
-                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
-                        <NavLink
-
-                            to={'/dashboard/manage'}
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? ""
-                                        : ""
-                            }
-                        >
-
-                            <div className='flex justify-center items-center gap-4'>
-                                <MdMiscellaneousServices />
-                                <h1>Manage Services</h1></div>
+                                    to={'/dashboard/adminhome'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
 
 
-                        </NavLink>
-                    </li>
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <img className='w-6' src="https://i.ibb.co/tbRf4sd/image-removebg-preview-79.png" alt="" />
+                                        <h1>Admin Home</h1></div>
 
-                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
-                        <NavLink
+                                </NavLink>
+                            </li>
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
 
-                            to={'/dashboard/shopinglist'}
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? ""
-                                        : ""
-                            }
-                        >
+                                    to={'/dashboard/add'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
 
-                            <div className='flex justify-center items-center gap-4'>
-                                <FaListUl /> 
-                                <h1>Shoping List</h1>
-                                <span className="mb-3 flex h-[24px] w-[24px] items-center justify-center rounded-full bg-pink-300 text-center text-[12px] text-white ">{cart.length}</span>
-                                </div>
-                                
-
-
-                        </NavLink>
-                    </li>
-
-                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
-                        <NavLink
-
-                            to={'/dashboard/booking'}
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? ""
-                                        : ""
-                            }
-                        >
-
-                            <div className='flex justify-center items-center gap-4'>
-                                <MdShoppingCart />
-                                <h1>Booking</h1></div>
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <IoMdAdd />
+                                        <h1>Add Service</h1></div>
 
 
-                        </NavLink>
-                    </li>
-                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
-                        <NavLink
-
-                            to={'/dashboard/pay'}
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? ""
-                                        : ""
-                            }
-                        >
-
-                            <div className='flex justify-center items-center gap-4'>
-                                <FaMoneyCheckDollar />
-                                <h1>Payment</h1></div>
+                                </NavLink>
+                            </li>
 
 
-                        </NavLink>
-                    </li>
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
 
-                    <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
-                        <NavLink
+                                    to={'/dashboard/makeadmin'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
 
-                            to={'/dashboard/review'}
-                            className={({ isActive, isPending }) =>
-                                isPending
-                                    ? "pending"
-                                    : isActive
-                                        ? ""
-                                        : ""
-                            }
-                        >
-
-                            <div className='flex justify-center items-center gap-4'>
-                                <FaRegCommentDots />
-                                <h1>Review</h1></div>
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <RiAdminFill />
+                                        <h1>Make Admin</h1></div>
 
 
-                        </NavLink>
-                    </li>
-              </ul>
+                                </NavLink>
+                            </li>
+
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
+
+                                    to={'/dashboard/manage'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
+
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <MdMiscellaneousServices />
+                                        <h1>Manage Services</h1></div>
+
+
+                                </NavLink>
+                            </li>
+
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
+
+                                    to={'/dashboard/shopinglist'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
+
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <FaListUl />
+                                        <h1>Shoping List</h1>
+                                        <span className="mb-3 flex h-[24px] w-[24px] items-center justify-center rounded-full bg-pink-300 text-center text-[12px] text-white ">{cart.length}</span>
+                                    </div>
+
+
+
+                                </NavLink>
+                            </li>
+
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
+
+                                    to={'/dashboard/booking'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
+
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <MdShoppingCart />
+                                        <h1>Booking</h1></div>
+
+
+                                </NavLink>
+                            </li>
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
+
+                                    to={'/dashboard/pay'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
+
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <FaMoneyCheckDollar />
+                                        <h1>Payment</h1></div>
+
+
+                                </NavLink>
+                            </li>
+
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
+
+                                    to={'/dashboard/review'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
+
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <FaRegCommentDots />
+                                        <h1>Review</h1></div>
+
+
+                                </NavLink>
+                            </li>
+                        </ul>
+                        :
+                        <>
+                        
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
+
+                                    to={'/dashboard/booking'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
+
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <MdShoppingCart />
+                                        <h1>Booking</h1></div>
+
+
+                                </NavLink>
+                            </li>
+
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
+
+                                    to={'/dashboard/review'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
+
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <FaRegCommentDots />
+                                        <h1>Review</h1></div>
+
+
+                                </NavLink>
+                            </li>
+                        
+                        </>
+             }
+
+
             </List>
             <Divider />
             <List>

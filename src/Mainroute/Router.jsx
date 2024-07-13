@@ -18,6 +18,7 @@ import ServicesNav from "../Pages/Services/ServicesNav";
 import ShopingList from "../Dashboard/ShopingList";
 import Booking from "../Dashboard/Booking";
 import Payment from "../Dashboard/Pay/Payment";
+import Adminhome from "../Dashboard/Admin/Adminhome";
 
 export const router = createBrowserRouter([
     {
@@ -59,6 +60,10 @@ export const router = createBrowserRouter([
             {
                 path:'orderlist',
                 element:<OrderList/>
+            },
+            {
+                path:'adminhome',
+                element:<Adminhome/>
             },
             {
                 path:'add',

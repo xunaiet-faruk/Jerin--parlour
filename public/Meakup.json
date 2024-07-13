@@ -27,7 +27,47 @@
         "price": "124",
         "discount": "129",
         "description": "Enjoy our pedicure bliss package that will leave your feet feeling soft, smooth, and refreshed, package that will leave your feet feeling soft, smooth, and refreshed"
-    } ,{
+    } , {
+        "image": "https://i.ibb.co/6g2hjRg/image.png",
+        "title": "Swedish Massage",
+        "price": "524",
+        "discount": "39",
+        "description": "Relax with a traditional Swedish massage that uses long, flowing strokes to reduce stress and improve circulation."
+    },
+    {
+        "image": "https://i.ibb.co/X4CLTW6/image.png",
+        "title": "Deep Tissue Massage",
+        "price": "124",
+        "discount": "9",
+        "description": "A deep tissue massage targets deeper layers of muscles and connective tissue to relieve chronic pain and tension."
+    },{
+        "image": "https://i.ibb.co/1d4GkfC/image.png",
+        "title": "High Ponytail",
+        "price": "124",
+        "discount": "9",
+        "description": "A high ponytail is a sleek and simple style that can be dressed up or down for any occasion."
+    },
+    {
+        "image": "https://i.ibb.co/1d5V845/image.png",
+        "title": "Layered Cut",
+        "price": "124",
+        "discount": "129",
+        "description": "Add some dimension to your hair with a layered cut that provides movement and volume."
+    },
+    {
+        "image": "https://i.ibb.co/L0Rc8Kb/image.png",
+        "title": "Beach Waves",
+        "price": "104",
+        "discount": "129",
+        "description": "Soft, tousled waves that give you that effortless, beachy look, perfect for any casual outing."
+    },
+    {
+        "image": "https://i.ibb.co/Qnpdby1/image.png",
+        "title": "Hot Stone Massage",
+        "price": "124",
+        "discount": "29",
+        "description": "Enjoy a hot stone massage that uses smooth, heated stones to promote relaxation and ease muscle stiffness."
+    },{
         "image": "https://i.ibb.co/jVV4vBg/image.png",
         "title": "Relaxing Facial",
         "price": "124",

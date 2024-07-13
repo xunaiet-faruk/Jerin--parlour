@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Usecard from '../../../Hooks/Usecard';
 import UseAxios from '../../../Hooks/Axiossecure/UseAxios';
 import UseServices from '../../../Hooks/Axiossecure/UseServices';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../../Component/Authentication/Providers/Authprovider';
 
 const Makeup = () => {
     const [refetch, services] = UseServices();
+    const {user} =useContext(AuthContext)
     const [meakup, setMeakup] = useState([]);
     const axiosSecure = UseAxios();
 
@@ -16,14 +18,16 @@ const Makeup = () => {
     }, []);
 
     const handleServices = (item) => {
-        axiosSecure.post(`/Services`, item)
+        const itemWithEmail = { ...item, email: user.email };
+
+        axiosSecure.post(`/Services`, itemWithEmail)
             .then(res => {
                 console.log(res.data);
-                if (res.data.acknowledged == true){
+                if (res.data.acknowledged === true) {
                     Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: "Your Booking Is Received",
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Your Booking Is Received',
                         showConfirmButton: false,
                         timer: 1500
                     });
