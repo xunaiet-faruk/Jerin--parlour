@@ -1,7 +1,7 @@
 
 const Profosinal = () => {
     return (
-        <div className="bg-[#Faeae3] lg:h-[100vh] mt-32 max-w-screen-2xl mx-auto ">
+        <div className="bg-[#Faeae3] lg:h-[700px] mt-32 max-w-screen-2xl mx-auto ">
             <div className="grid lg:grid-cols-2 grid-cols-1 justify-between items-center px-12">
                 <div className="space-y-5">
                     <h1 className="text-5xl font-bold ">Works of Our <br />

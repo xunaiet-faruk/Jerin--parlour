@@ -1,45 +1,56 @@
 import { useContext, useEffect, useState } from 'react';
-import Usecard from '../../../Hooks/Usecard';
 import UseAxios from '../../../Hooks/Axiossecure/UseAxios';
-import UseServices from '../../../Hooks/Axiossecure/UseServices';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../Component/Authentication/Providers/Authprovider';
 
 const Makeup = () => {
-    const [refetch, services] = UseServices();
-    const {user} =useContext(AuthContext)
-    const [meakup, setMeakup] = useState([]);
+    const [makeup, setMakeup] = useState([]);
+    const { user } = useContext(AuthContext);
     const axiosSecure = UseAxios();
 
     useEffect(() => {
-        fetch('./Meakup.json')
-            .then(res => res.json())
-            .then(data => setMeakup(data));
-    }, []);
-
-    const handleServices = (item) => {
-        const itemWithEmail = { ...item, email: user.email };
-
-        axiosSecure.post(`/Services`, itemWithEmail)
+        axiosSecure.get('/ServiceItem')
             .then(res => {
-                console.log(res.data);
-                if (res.data.acknowledged === true) {
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Your Booking Is Received',
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                }
+                console.log('Service Items:', res.data);
+                setMakeup(res.data);
+            })
+            .catch(error => {
+                console.error('Error fetching service items:', error);
             });
+    }, [axiosSecure]);
+
+    const handleServices = item => {
+        if (user && user.email) {
+            const bookingData = {
+                ...item,
+                email: user.email,
+                status: 'Pending' 
+            };
+
+            axiosSecure.post('/Services', bookingData)
+                .then(res => {
+                    console.log('Service Booking:', res.data);
+                    if (res.data.acknowledged === true) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Your Booking Is Received',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error booking service:', error);
+                });
+        }
     };
 
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
-            {meakup?.map((item, index) =>
+            {makeup.map((item, index) => (
                 <div key={index} className="card w-96 glass hover:shadow-xl">
-                    <figure><img className='h-64 object-cover w-full' src={item?.image} alt="car!" /></figure>
+                    <figure><img className='h-64 object-cover w-full' src={item?.image} alt="" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">{item?.title}</h2>
                         <p className='text-gray-500'>{item?.description}</p>
@@ -54,7 +65,7 @@ const Makeup = () => {
                         </div>
                     </div>
                 </div>
-            )}
+            ))}
         </div>
     );
 };

@@ -1,27 +1,48 @@
-import { useState } from "react";
-import UseServices from "../Hooks/Axiossecure/UseServices";
+import { useEffect, useState } from "react";
 import '../Dashboard/Orderlist.css';
+import UseAxios from "../Hooks/Axiossecure/UseAxios";
+import UseServices from "../Hooks/Axiossecure/UseServices";
 
 const OrderList = () => {
-    const [, services, , updateServiceStatus] = UseServices();
-    const [statuses, setStatuses] = useState(services.reduce((acc, item) => {
-        acc[item._id] = item.status || "Take Action";
-        return acc;
-    }, {}));
+    const [order, setOrder] = useState([]);
+    const [refetch, services, isLoading, updateServiceStatus] = UseServices();
+    const axiosSecure = UseAxios();
+    const [statuses, setStatuses] = useState({});
 
-    const handleSelectChange = (e, id) => {
+    useEffect(() => {
+        axiosSecure.get('/AllServices')
+            .then(res => {
+                setOrder(res.data);
+                setStatuses(res.data.reduce((acc, item) => {
+                    acc[item._id] = item.status || "Take Action";
+                    return acc;
+                }, {}));
+            })
+            .catch(error => {
+                console.error('Error fetching service items:', error);
+            });
+    }, [axiosSecure]);
+
+    const handleSelectChange = async (e, id) => {
         const newStatus = e.target.value;
         setStatuses(prevStatuses => ({
             ...prevStatuses,
             [id]: newStatus,
         }));
-        updateServiceStatus(id, newStatus);
+
+        try {
+            await updateServiceStatus(id, newStatus);
+            console.log('Service status updated:', newStatus);
+            refetch();
+        } catch (error) {
+            console.error('Error updating service status:', error);
+        }
     };
 
     return (
         <div className="mt-12">
             <div className="overflow-x-auto">
-                {services.length > 0 && (
+                {order.length > 0 && (
                     <table className="min-w-[90%] bg-white shadow-md border mx-auto border-gray-100 my-6">
                         <thead className="rounded-full py-12 border-t-2 border-pink-300">
                             <tr className="bg-gray-100 text-[#959191] text-sm">
@@ -33,13 +54,13 @@ const OrderList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {services.map((item, index) => (
+                            {order.map((item, index) => (
                                 <tr key={index} className="hover:bg-gray-50 transition duration-300 text-sm text-black">
                                     <td className="py-4 px-6 border-b">
-                                        <img className="w-12 h-12 bg-cover rounded-full" src={item?.image} alt="" />
+                                        <img className="w-12 h-12 bg-cover rounded-full" src={item.image} alt="" />
                                     </td>
-                                    <td className="py-4 px-6 border-b">{item?.email}</td>
-                                    <td className="py-4 px-6 border-b">{item?.title}</td>
+                                    <td className="py-4 px-6 border-b">{item.email}</td>
+                                    <td className="py-4 px-6 border-b">{item.title}</td>
                                     <td className="py-4 px-16 border-b">Bkase</td>
                                     <td className="py-4 px-6 border-b text-end">
                                         <select

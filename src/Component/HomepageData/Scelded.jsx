@@ -6,7 +6,7 @@ const Scelded = () => {
     return (
         <div className="mt-60 max-w-screen-2xl mx-auto ">
             <div>
-                <div className="grid lg:grid-cols-3 justify-center  px-5 md:grid-cols-3 grid-cols-1">
+                <div className="grid lg:grid-cols-3 relative justify-center  px-5 md:grid-cols-3 grid-cols-1">
                     <div className="border-2  border-r-0 border-[#F63E7B] ">
                       <div className="ml-12 space-y-7">
                             <h1 className="text-6xl mt-8 font-bold ">Schedule</h1>
@@ -25,7 +25,7 @@ const Scelded = () => {
                       </div>
                     </div>
                     <div>
-                        <img className="h-[720px] -mt-10 left-[420px] shadow-xl absolute" src="https://livedemo00.template-help.com/wt_prod-9025_v1/images/home-4-6-498x688.jpg" alt="" />
+                        <img className="h-[720px] -mt-10 left-[490px] shadow-xl absolute" src="https://livedemo00.template-help.com/wt_prod-9025_v1/images/home-4-6-498x688.jpg" alt="" />
                     </div>
                     <div className="bg-[#fdafc9] text-white ">
 

@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import BlogData from "./BlogData";
+import Blogopper from "./Blogopper";
 
 
 const Blog = () => {
@@ -23,6 +24,7 @@ const Blog = () => {
             
             <div>
                 <BlogData/>
+                <Blogopper/>
             </div>
         </div>
     );

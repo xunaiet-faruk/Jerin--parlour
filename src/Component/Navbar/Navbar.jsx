@@ -111,7 +111,7 @@ const Navbar = () => {
            
             <div ref={dropDownRef} className="relative mx-auto w-fit text-black">
                 <button onClick={() => setOpen((prev) => !prev)}>
-                    <img width={40} height={40} className="size-10 rounded-full bg-slate-500 object-cover duration-500 hover:scale-x-[98%] hover:opacity-80" src={user?.photoURL} alt="avatar" />
+                    <img width={40} height={40} className="size-10 rounded-full bg-slate-500  object-cover duration-500 hover:scale-x-[98%] hover:opacity-80" src={user?.photoURL} alt="avatar" />
                     <h1 className="text-[#F63E7B] font-semobold">{user?.displayName}</h1>
                 </button>
                 <ul className={`${open ? 'visible duration-300' : 'invisible'} absolute right-0 top-12 z-50 w-fit rounded-sm bg-slate-200 shadow-md`}>
@@ -150,7 +150,7 @@ const Navbar = () => {
         <div className="max-w-screen-2xl mx-auto">
 
 
-            <div className="navbar fixed z-10  bg-opacity-30  bg-[#Faeae3] ">
+            <div className="navbar fixed z-10  bg-opacity-30  bg-[#Faeae3]   ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

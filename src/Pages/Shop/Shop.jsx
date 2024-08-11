@@ -5,10 +5,10 @@ import { AuthContext } from "../../Component/Authentication/Providers/Authprovid
 import Swal from "sweetalert2";
 import UseAxios from "../../Hooks/Axiossecure/UseAxios";
 import Usecard from "../../Hooks/Usecard";
+import AdminTotalcount from "../../Dashboard/Admin/AdminTotalcount";
 
 
 const Shop = () => {
-    const [userRating, setUserRating] = useState(1);
     const [,refetch] =Usecard()
     const {user} =useContext(AuthContext)
     const [shop,setShop] = useState([])
@@ -84,16 +84,7 @@ const Shop = () => {
             </div>
 
             <div>
-                <div className="flex justify-end px-20">
-                    <select className="select select-bordered w-full max-w-xs font-bold text-black">
-                        <option disabled selected>Select Your Choice</option>
-                        <option>Hair</option>
-                        <option>Cream</option>
-                        <option>Oil</option>
-                        <option>Makeup </option>
-                    </select>
-                   
-                </div>
+                
 
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  max-w-screen-xl gap-12 mt-12 mb-32 mx-auto">
                     {
@@ -102,7 +93,7 @@ const Shop = () => {
 
                                 <div className="">
                                     <div>
-                                        <img src={item?.image} alt="" className="w-full"/>
+                                        <img src={item?.image} alt="" className="w-full transition duration-300 ease-in-out hover:scale-110"/>
                                     </div>
                                     <div>
                                         <h1 className="text-2xl text-center py-2 font-semibold">{item?.name}</h1>
@@ -124,6 +115,7 @@ const Shop = () => {
                         )
                     }
                 </div>
+                
 
             </div>
            
