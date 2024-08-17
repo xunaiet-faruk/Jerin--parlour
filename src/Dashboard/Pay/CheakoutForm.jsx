@@ -4,6 +4,7 @@ import './Cheakoutform.css';
 import UseAxios from "../../Hooks/Axiossecure/UseAxios";
 import UseServices from "../../Hooks/Axiossecure/UseServices";
 import { AuthContext } from "../../Component/Authentication/Providers/Authprovider";
+import Swal from "sweetalert2";
 
 const CheakoutForm = () => {
     const [transitionId, setTranstionId] =useState('');
@@ -13,19 +14,20 @@ const CheakoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
     const [errorMessage, setErrorMessage] = useState('');
-    const [, services] = UseServices();
+    const [refetch, services] = UseServices();
     const totalPrice = services.reduce((total, item) => total + parseFloat(item.price), 0);
 
     useEffect(() => {
-        console.log("Total Price:", totalPrice);
-        axiosSecure.post('/create-payment-intent', { price: totalPrice })
-            .then(res => {
-                console.log(res.data.clientSecret);
-                setSecreact(res.data.clientSecret);
-            })
-            .catch(error => {
-                console.error("Error creating payment intent:", error);
-            });
+        if(totalPrice > 0){
+            axiosSecure.post('/create-payment-intent', { price: totalPrice })
+                .then(res => {
+                    console.log(res.data.clientSecret);
+                    setSecreact(res.data.clientSecret);
+                })
+                .catch(error => {
+                    console.error("Error creating payment intent:", error);
+                });
+        }
     }, [axiosSecure, totalPrice]);
 
 
@@ -70,6 +72,24 @@ const CheakoutForm = () => {
             if(paymentIntent.status === "succeeded"){
                 console.log("transintion id",paymentIntent.id);
                 setTranstionId(paymentIntent.id)
+
+                const payment ={
+                    email :user.email,
+                    price :totalPrice,
+                    date :new Date(), //utc date convert ,
+                    transitionId :paymentIntent.id,
+                    services :services.map(item =>item._id),
+                   
+                }
+                const res = await axiosSecure.post('/Payment',payment)
+                refetch();
+                if (res.data.insertedId){
+                    Swal.fire({
+                        title: "Payment ",
+                        text: "Congratulation Your payment Successed",
+                        icon: "success"
+                    });
+                }
             }
         }
     };

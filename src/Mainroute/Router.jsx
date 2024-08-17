@@ -19,6 +19,7 @@ import ShopingList from "../Dashboard/ShopingList";
 import Booking from "../Dashboard/Booking";
 import Payment from "../Dashboard/Pay/Payment";
 import Adminhome from "../Dashboard/Admin/Adminhome";
+import Payhistory from "../Dashboard/Pay/Payhistory";
 
 export const router = createBrowserRouter([
     {
@@ -84,6 +85,10 @@ export const router = createBrowserRouter([
             {
                 path:'pay',
                 element:<Payment/>
+            },
+            {
+                path:'payHistory',
+                element:<Payhistory/>
             },
             {
                 path:'review',

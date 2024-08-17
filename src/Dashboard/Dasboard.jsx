@@ -12,7 +12,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { NavLink, Outlet } from 'react-router-dom';
 import image from '../../public/Icon.png' 
-import { FaShoppingBag } from 'react-icons/fa';
+import { FaHistory, FaShoppingBag } from 'react-icons/fa';
 import { IoMdAdd } from "react-icons/io";
 import { RiAdminFill } from "react-icons/ri";
 import { MdMiscellaneousServices } from "react-icons/md";
@@ -252,6 +252,28 @@ function ResponsiveDrawer(props) {
 
                                 </NavLink>
                             </li>
+
+                            <li className='text-center hover:bg-gray-200 rounded-lg hover:border-r-4 hover:border-red-400 py-3 text-lg font-semibold'>
+                                <NavLink
+
+                                    to={'/dashboard/payHistory'}
+                                    className={({ isActive, isPending }) =>
+                                        isPending
+                                            ? "pending"
+                                            : isActive
+                                                ? ""
+                                                : ""
+                                    }
+                                >
+
+                                    <div className='flex justify-center items-center gap-4'>
+                                        <FaHistory/>
+                                        <h1>Payment History</h1></div>
+
+
+                                </NavLink>
+                            </li>
+
                         </ul>
                         :
                         <>
